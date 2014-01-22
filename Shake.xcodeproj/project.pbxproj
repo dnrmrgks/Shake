@@ -22,10 +22,10 @@
 		00D17979188F55F400C8F155 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00D17977188F55F400C8F155 /* InfoPlist.strings */; };
 		00D1797B188F55F400C8F155 /* ShakeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D1797A188F55F400C8F155 /* ShakeTests.m */; };
 		00D17985188F579200C8F155 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D17984188F579200C8F155 /* AVFoundation.framework */; };
-		00D17987188F5B9800C8F155 /* music1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00D17986188F5B9800C8F155 /* music1.mp3 */; };
-		00D17989188F635100C8F155 /* ball1.png in Resources */ = {isa = PBXBuildFile; fileRef = 00D17988188F635100C8F155 /* ball1.png */; };
-		00D1798B188F867F00C8F155 /* girl7.png in Resources */ = {isa = PBXBuildFile; fileRef = 00D1798A188F867F00C8F155 /* girl7.png */; };
-		00D1798D188F8BE400C8F155 /* music2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00D1798C188F8BE400C8F155 /* music2.mp3 */; };
+		00D17991188FA05B00C8F155 /* ball1.png in Resources */ = {isa = PBXBuildFile; fileRef = 00D17990188FA05B00C8F155 /* ball1.png */; };
+		00D17993188FA06E00C8F155 /* girl7.png in Resources */ = {isa = PBXBuildFile; fileRef = 00D17992188FA06E00C8F155 /* girl7.png */; };
+		00D17995188FA08200C8F155 /* music1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00D17994188FA08200C8F155 /* music1.mp3 */; };
+		00D17997188FA09000C8F155 /* music2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00D17996188FA09000C8F155 /* music2.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,10 +59,10 @@
 		00D17978188F55F400C8F155 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		00D1797A188F55F400C8F155 /* ShakeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShakeTests.m; sourceTree = "<group>"; };
 		00D17984188F579200C8F155 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		00D17986188F5B9800C8F155 /* music1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = music1.mp3; path = "../../../../Downloads/아카이브/music1.mp3"; sourceTree = "<group>"; };
-		00D17988188F635100C8F155 /* ball1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ball1.png; path = ../../ImageViewList/ball1.png; sourceTree = "<group>"; };
-		00D1798A188F867F00C8F155 /* girl7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = girl7.png; path = ../../../../Downloads/girl7.png; sourceTree = "<group>"; };
-		00D1798C188F8BE400C8F155 /* music2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = music2.mp3; path = "../../../../Downloads/아카이브/music2.mp3"; sourceTree = "<group>"; };
+		00D17990188FA05B00C8F155 /* ball1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball1.png; sourceTree = "<group>"; };
+		00D17992188FA06E00C8F155 /* girl7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl7.png; sourceTree = "<group>"; };
+		00D17994188FA08200C8F155 /* music1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music1.mp3; sourceTree = "<group>"; };
+		00D17996188FA09000C8F155 /* music2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music2.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,10 +124,10 @@
 		00D17955188F55F400C8F155 /* Shake */ = {
 			isa = PBXGroup;
 			children = (
-				00D1798C188F8BE400C8F155 /* music2.mp3 */,
-				00D1798A188F867F00C8F155 /* girl7.png */,
-				00D17988188F635100C8F155 /* ball1.png */,
-				00D17986188F5B9800C8F155 /* music1.mp3 */,
+				00D17996188FA09000C8F155 /* music2.mp3 */,
+				00D17994188FA08200C8F155 /* music1.mp3 */,
+				00D17992188FA06E00C8F155 /* girl7.png */,
+				00D17990188FA05B00C8F155 /* ball1.png */,
 				00D1795E188F55F400C8F155 /* AppDelegate.h */,
 				00D1795F188F55F400C8F155 /* AppDelegate.m */,
 				00D17961188F55F400C8F155 /* Main.storyboard */,
@@ -244,12 +244,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00D1798D188F8BE400C8F155 /* music2.mp3 in Resources */,
+				00D17997188FA09000C8F155 /* music2.mp3 in Resources */,
 				00D17968188F55F400C8F155 /* Images.xcassets in Resources */,
-				00D1798B188F867F00C8F155 /* girl7.png in Resources */,
-				00D17989188F635100C8F155 /* ball1.png in Resources */,
+				00D17991188FA05B00C8F155 /* ball1.png in Resources */,
 				00D1795A188F55F400C8F155 /* InfoPlist.strings in Resources */,
-				00D17987188F5B9800C8F155 /* music1.mp3 in Resources */,
+				00D17993188FA06E00C8F155 /* girl7.png in Resources */,
+				00D17995188FA08200C8F155 /* music1.mp3 in Resources */,
 				00D17963188F55F400C8F155 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
