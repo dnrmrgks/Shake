@@ -26,6 +26,7 @@
 		00D17993188FA06E00C8F155 /* girl7.png in Resources */ = {isa = PBXBuildFile; fileRef = 00D17992188FA06E00C8F155 /* girl7.png */; };
 		00D17995188FA08200C8F155 /* music1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00D17994188FA08200C8F155 /* music1.mp3 */; };
 		00D17997188FA09000C8F155 /* music2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00D17996188FA09000C8F155 /* music2.mp3 */; };
+		00D17999188FB0AC00C8F155 /* Golf Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = 00D17998188FB0AC00C8F155 /* Golf Ball.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		00D17992188FA06E00C8F155 /* girl7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = girl7.png; sourceTree = "<group>"; };
 		00D17994188FA08200C8F155 /* music1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music1.mp3; sourceTree = "<group>"; };
 		00D17996188FA09000C8F155 /* music2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music2.mp3; sourceTree = "<group>"; };
+		00D17998188FB0AC00C8F155 /* Golf Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Golf Ball.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				00D17996188FA09000C8F155 /* music2.mp3 */,
 				00D17994188FA08200C8F155 /* music1.mp3 */,
 				00D17992188FA06E00C8F155 /* girl7.png */,
+				00D17998188FB0AC00C8F155 /* Golf Ball.png */,
 				00D17990188FA05B00C8F155 /* ball1.png */,
 				00D1795E188F55F400C8F155 /* AppDelegate.h */,
 				00D1795F188F55F400C8F155 /* AppDelegate.m */,
@@ -247,6 +250,7 @@
 				00D17997188FA09000C8F155 /* music2.mp3 in Resources */,
 				00D17968188F55F400C8F155 /* Images.xcassets in Resources */,
 				00D17991188FA05B00C8F155 /* ball1.png in Resources */,
+				00D17999188FB0AC00C8F155 /* Golf Ball.png in Resources */,
 				00D1795A188F55F400C8F155 /* InfoPlist.strings in Resources */,
 				00D17993188FA06E00C8F155 /* girl7.png in Resources */,
 				00D17995188FA08200C8F155 /* music1.mp3 in Resources */,

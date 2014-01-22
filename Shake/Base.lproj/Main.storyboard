@@ -43,10 +43,15 @@
                                 <rect key="frame" x="94" y="87" width="172" height="192"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Golf Ball.png" translatesAutoresizingMaskIntoConstraints="NO" id="oOJ-IE-Ox4">
+                                <rect key="frame" x="55" y="327" width="87" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="ball" destination="oOJ-IE-Ox4" id="PJY-Yw-Vb4"/>
                         <outlet property="image" destination="ePv-O1-ofz" id="j5G-mo-Jad"/>
                         <outlet property="movingImage" destination="ePv-O1-ofz" id="Zu9-3P-AdG"/>
                     </connections>
@@ -75,6 +80,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Golf Ball.png" width="256" height="266"/>
         <image name="ball1.png" width="342" height="342"/>
         <image name="girl7.png" width="350" height="350"/>
     </resources>

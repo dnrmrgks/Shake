@@ -13,10 +13,18 @@
     AVAudioPlayer *audioPlayer2;
     float valueX;
     float valueY;
+    
+    float value2X;
+    float value2Y;
+    
+    CGPoint ballMovement;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *movingImage;
+@property (weak, nonatomic) IBOutlet UIImageView *ball;
 -(void)star;
-- (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration;
 
+- (void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration;
+- (void)initializerTimer;
+- (void)animateBall:(NSTimer *)theTimer;
 
 @end

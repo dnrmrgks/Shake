@@ -28,7 +28,11 @@
     [[UIAccelerometer sharedAccelerometer]setUpdateInterval:0.1];
     [[UIAccelerometer sharedAccelerometer]setDelegate:self];
 }
-
+-(void)star2{
+    
+    [[UIAccelerometer sharedAccelerometer ]setUpdateInterval:0.5];
+    [[UIAccelerometer sharedAccelerometer]setDelegate:self];
+}
 -(void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration{
  
 
@@ -36,6 +40,7 @@
     movingobject =arc4random() %39;
     valueX= acceleration.x *100.0;
     valueY= acceleration.y *100.0;
+    
     
     float newValueX = (int) (self.movingImage.center.x+valueX);
     float newValueY = (int) (self.movingImage.center.y+valueY);
@@ -61,6 +66,30 @@
     
     CGPoint Position = CGPointMake(newValueX, newValueY);
     self.movingImage.center = Position;
+
+
+    
+    
+    /*
+    
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:0.1];
+    [UIView setAnimationDelay:0.3];
+    [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+    self.movingImage2.frame= CGRectMake(100, 5, 100, 200);
+    [UIView commitAnimations];
+    
+    */
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
 }
 
 
@@ -86,16 +115,47 @@
     [UIView animateWithDuration:0.7 animations:^{
         self.image.alpha = (self.image.alpha == 0.0) ? 0.6: 0.0;
         if(self.image. alpha ==0.6){
-            self.image.alpha ==0.0;
+            self.image.alpha ==0;
         }
         else{
             self.image.alpha==0.6;
         }
     }];
+   
+    self.image.transform = CGAffineTransformMakeScale(1.5, 1.5);
+    [UIView commitAnimations];
+    
     
     
     
 }
+
+-  (void)initializeTimer {
+    float theInterval = 1.0/30.0;
+    [NSTimer scheduledTimerWithTimeInterval:theInterval target:self
+     
+                                   selector:@selector(animateBall:) userInfo:nil repeats:YES];
+    
+}
+
+- (void)animateBall:(NSTimer *)theTimer {
+    
+    
+    self.ball.center = CGPointMake(self.ball.center.x+ballMovement.x, self.ball.center.y+ballMovement.y);
+    
+    if(self.ball.center.x > 310 || self.ball.center.x < 16) ballMovement.x =-ballMovement.x;
+    
+    if(self.ball.center.y > 444 || self.ball.center.y < 32) ballMovement.y = -ballMovement.y;
+    
+}
+
+
+
+
+
+
+
+
 
 
 - (void)viewDidLoad
@@ -104,11 +164,19 @@
     [self sound1];
     
     [NSTimer scheduledTimerWithTimeInterval:20 target:self selector:@selector(ChangeSound:) userInfo:nil repeats:NO];
+    
 
     
     AVAudioSession *session = [AVAudioSession sharedInstance];
     __autoreleasing NSError *error = nil;
     [session setCategory:AVAudioSessionCategoryAmbient error:&error];
+    
+    
+    
+    ballMovement = CGPointMake(4,4);
+    
+    [self initializeTimer];
+    
  
 	// Do any additional setup after loading the view, typically from a nib.
 }
