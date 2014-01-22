@@ -36,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ball1.png" translatesAutoresizingMaskIntoConstraints="NO" id="ePv-O1-ofz">
-                                <rect key="frame" x="94" y="87" width="73" height="75"/>
+                                <rect key="frame" x="94" y="87" width="153" height="163"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
@@ -44,6 +44,7 @@
                     </view>
                     <connections>
                         <outlet property="image" destination="ePv-O1-ofz" id="j5G-mo-Jad"/>
+                        <outlet property="movingImage" destination="ePv-O1-ofz" id="Zu9-3P-AdG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

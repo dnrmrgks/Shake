@@ -23,7 +23,44 @@
    
 }
 
+-(void)star{
+    
+    [[UIAccelerometer sharedAccelerometer]setUpdateInterval:0.1];
+    [[UIAccelerometer sharedAccelerometer]setDelegate:self];
+}
 
+-(void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration{
+ 
+#define movingobject 40
+    
+    valueX= acceleration.x *100.0;
+    valueY= acceleration.y *100.0;
+    
+    float newValueX = (int) (self.movingImage.center.x+valueX);
+    float newValueY = (int) (self.movingImage.center.y+valueY);
+    
+   
+    if(newValueX > (320 -movingobject)){
+        
+        newValueX = (320 -movingobject);
+    }
+    if(newValueX <(0+ movingobject)){
+        
+        newValueX = (0 +movingobject);
+    }
+    
+    if(newValueY > (400-movingobject)){
+        
+        newValueY = (400-movingobject);
+    }
+    
+    if(newValueY <(0+movingobject)){
+        newValueY = (0+movingobject);
+    }
+    
+    CGPoint Position = CGPointMake(newValueX, newValueY);
+    self.movingImage.center = Position;
+}
 
 
 
@@ -43,6 +80,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     [self becomeFirstResponder];
+    [self star];
 }
 
 - (BOOL)canBecomeFirstResponder {
@@ -61,7 +99,6 @@
     
     NSLog(@"Shaking start");
 }
-
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent*)event {
     NSLog(@"Shaking end");
     
