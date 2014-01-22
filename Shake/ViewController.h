@@ -10,6 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 @interface ViewController : UIViewController<AVAudioPlayerDelegate,AVAudioRecorderDelegate,UIAccelerometerDelegate>{
     AVAudioPlayer *audioPlayer;
+    AVAudioPlayer *audioPlayer2;
     float valueX;
     float valueY;
 }

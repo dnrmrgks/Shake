@@ -31,8 +31,9 @@
 
 -(void)accelerometer:(UIAccelerometer *)accelerometer didAccelerate:(UIAcceleration *)acceleration{
  
-#define movingobject 40
-    
+
+    int movingobject = 40;
+    movingobject =arc4random() %39;
     valueX= acceleration.x *100.0;
     valueY= acceleration.y *100.0;
     
@@ -63,10 +64,51 @@
 }
 
 
+-(void)sound1{
+    
+    NSString *filePath = [[NSBundle mainBundle]pathForResource:@"music1" ofType:@"mp3"];
+    NSURL *fileUrl=[NSURL fileURLWithPath:filePath];
+    audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:fileUrl error:nil];
+    [audioPlayer play];
+    
+}
+
+- (void)ChangeSound:(NSTimer *)timer {
+    
+    [audioPlayer stop];
+    NSString *filePath2 = [[NSBundle mainBundle]pathForResource:@"music2" ofType:@"mp3"];
+    NSURL *fileUrl2 = [ NSURL fileURLWithPath:filePath2];
+    audioPlayer2 = [[AVAudioPlayer alloc]initWithContentsOfURL:fileUrl2 error:nil];
+    [audioPlayer2 play];
+}
+-(void)alpha{
+    
+    [UIView animateWithDuration:0.7 animations:^{
+        self.image.alpha = (self.image.alpha == 0.0) ? 0.6: 0.0;
+        if(self.image. alpha ==0.6){
+            self.image.alpha ==0.0;
+        }
+        else{
+            self.image.alpha==0.6;
+        }
+    }];
+    
+    
+    
+}
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self sound1];
+    
+    [NSTimer scheduledTimerWithTimeInterval:20 target:self selector:@selector(ChangeSound:) userInfo:nil repeats:NO];
+
+    
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    __autoreleasing NSError *error = nil;
+    [session setCategory:AVAudioSessionCategoryAmbient error:&error];
  
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -81,28 +123,36 @@
     [super viewDidAppear:animated];
     [self becomeFirstResponder];
     [self star];
-}
+     }
 
 - (BOOL)canBecomeFirstResponder {
     return YES;
 }
 - (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent*)event {
     
-   
     
-    NSString *filePath = [[NSBundle mainBundle]pathForResource:@"music1" ofType:@"mp3"];
-    NSURL *fileUrl=[NSURL fileURLWithPath:filePath];
-    audioPlayer = [[AVAudioPlayer alloc]initWithContentsOfURL:fileUrl error:nil];
-    [audioPlayer play];
-                   
+    [self alpha];
+    
+    
+    
+    
+   /* NSString *filePath2 = [[NSBundle mainBundle]pathForResource:@"music2" ofType:@"mp3"];
+    NSURL *fileUrl2 = [ NSURL fileURLWithPath:filePath2];
+    audioPlayer2 = [[AVAudioPlayer alloc]initWithContentsOfURL:fileUrl2 error:nil];  */
+    //[NSTimer scheduledTimerWithTimeInterval:20 target:self selector:@selector(ChangeSound:) userInfo:nil repeats:NO];
+        
+    
     
     
     NSLog(@"Shaking start");
 }
+
+
+
 - (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent*)event {
     NSLog(@"Shaking end");
     
-    [audioPlayer stop];
+    
 }
 
 - (void)motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent*)event {
