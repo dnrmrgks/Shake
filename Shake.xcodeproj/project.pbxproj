@@ -21,6 +21,9 @@
 		00D17971188F55F400C8F155 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D17953188F55F400C8F155 /* UIKit.framework */; };
 		00D17979188F55F400C8F155 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 00D17977188F55F400C8F155 /* InfoPlist.strings */; };
 		00D1797B188F55F400C8F155 /* ShakeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D1797A188F55F400C8F155 /* ShakeTests.m */; };
+		00D17985188F579200C8F155 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D17984188F579200C8F155 /* AVFoundation.framework */; };
+		00D17987188F5B9800C8F155 /* music1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00D17986188F5B9800C8F155 /* music1.mp3 */; };
+		00D17989188F635100C8F155 /* ball1.png in Resources */ = {isa = PBXBuildFile; fileRef = 00D17988188F635100C8F155 /* ball1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		00D17976188F55F400C8F155 /* ShakeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShakeTests-Info.plist"; sourceTree = "<group>"; };
 		00D17978188F55F400C8F155 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		00D1797A188F55F400C8F155 /* ShakeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShakeTests.m; sourceTree = "<group>"; };
+		00D17984188F579200C8F155 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		00D17986188F5B9800C8F155 /* music1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = music1.mp3; path = "../../../../Downloads/아카이브/music1.mp3"; sourceTree = "<group>"; };
+		00D17988188F635100C8F155 /* ball1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ball1.png; path = ../../ImageViewList/ball1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00D17985188F579200C8F155 /* AVFoundation.framework in Frameworks */,
 				00D17952188F55F400C8F155 /* CoreGraphics.framework in Frameworks */,
 				00D17954188F55F400C8F155 /* UIKit.framework in Frameworks */,
 				00D17950188F55F400C8F155 /* Foundation.framework in Frameworks */,
@@ -101,6 +108,7 @@
 		00D1794E188F55F400C8F155 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				00D17984188F579200C8F155 /* AVFoundation.framework */,
 				00D1794F188F55F400C8F155 /* Foundation.framework */,
 				00D17951188F55F400C8F155 /* CoreGraphics.framework */,
 				00D17953188F55F400C8F155 /* UIKit.framework */,
@@ -112,6 +120,8 @@
 		00D17955188F55F400C8F155 /* Shake */ = {
 			isa = PBXGroup;
 			children = (
+				00D17988188F635100C8F155 /* ball1.png */,
+				00D17986188F5B9800C8F155 /* music1.mp3 */,
 				00D1795E188F55F400C8F155 /* AppDelegate.h */,
 				00D1795F188F55F400C8F155 /* AppDelegate.m */,
 				00D17961188F55F400C8F155 /* Main.storyboard */,
@@ -229,7 +239,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				00D17968188F55F400C8F155 /* Images.xcassets in Resources */,
+				00D17989188F635100C8F155 /* ball1.png in Resources */,
 				00D1795A188F55F400C8F155 /* InfoPlist.strings in Resources */,
+				00D17987188F5B9800C8F155 /* music1.mp3 in Resources */,
 				00D17963188F55F400C8F155 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
